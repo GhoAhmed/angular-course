@@ -6,6 +6,9 @@ import { InterpolationComponent } from './components/sections/interpolation/inte
 import { ListenerComponent } from './components/sections/listener/listener.component';
 import { TwbComponent } from './components/sections/twb/twb.component';
 import { ControlFlowComponent } from './components/sections/control-flow/control-flow.component';
+import { PipesComponent } from './components/sections/pipes/pipes.component';
+import { NgtComponent } from './components/sections/ngt/ngt.component';
+import { NgctComponent } from './components/sections/ngct/ngct.component';
 
 export const routes: Routes = [
   { path: 'hello', component: HelloComponent },
@@ -15,5 +18,8 @@ export const routes: Routes = [
   { path: 'listener', component: ListenerComponent },
   { path: 'two-way-binding', component: TwbComponent },
   { path: 'control-flow', component: ControlFlowComponent },
+  { path: 'pipes', component: PipesComponent },
+  { path: 'ng-template', component: NgtComponent },
+  { path: 'ng-container', component: NgctComponent },
   { path: '**', redirectTo: '' },
 ];

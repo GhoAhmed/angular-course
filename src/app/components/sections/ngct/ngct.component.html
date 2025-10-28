@@ -1,0 +1,10 @@
+<h2>User Profile</h2>
+
+<ng-container *ngIf="showDetails">
+    <p><strong>Name:</strong> Joe Doe</p>
+    <p><strong>Role:</strong> Full Stack Developer</p>
+</ng-container>
+
+<button (click)="showDetails = !showDetails" class="btn btn-primary">
+    {{ showDetails ? 'Hide' : 'Show' }} Details
+</button>

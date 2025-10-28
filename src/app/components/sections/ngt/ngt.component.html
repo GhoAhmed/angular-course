@@ -1,0 +1,13 @@
+<div class="p-4">
+    <button (click)="toggleLogin()" class="btn btn-primary mb-3">
+        {{ isLoggedIn ? 'Logout' : 'Login' }}
+    </button>
+
+    <div *ngIf="isLoggedIn; else guestTemplate">
+        <h2>Welcome back!</h2>
+    </div>
+
+    <ng-template #guestTemplate>
+        <h2>Please log in to access your dashboard.</h2>
+    </ng-template>
+</div>
