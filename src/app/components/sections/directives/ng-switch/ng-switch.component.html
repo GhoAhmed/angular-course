@@ -1,0 +1,11 @@
+<div [ngSwitch]="selectedRole">
+    <p *ngSwitchCase="'admin'">Welcome Admin! You have full access.</p>
+    <p *ngSwitchCase="'editor'">Welcome Editor! You can edit content.</p>
+    <p *ngSwitchCase="'viewer'">Welcome Viewer! You can view content.</p>
+    <p *ngSwitchDefault>Unknown role. Access denied.</p>
+</div>
+
+<button class="btn btn-primary mx-1" (click)="selectedRole = 'admin'">Admin</button>
+<button class="btn btn-warning mx-1" (click)="selectedRole = 'editor'">Editor</button>
+<button class="btn btn-danger mx-1" (click)="selectedRole = 'viewer'">Viewer</button>
+<button class="btn btn-success" (click)="selectedRole = 'guest'">Guest</button>

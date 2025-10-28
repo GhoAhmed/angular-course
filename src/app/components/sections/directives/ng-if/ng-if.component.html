@@ -1,0 +1,10 @@
+<button class="btn btn-primary mb-3" (click)="isLoggedIn = !isLoggedIn">
+    {{ isLoggedIn ? 'Logout' : 'Login' }}
+</button>
+
+<div *ngIf="isLoggedIn">
+    <p>Welcome back!</p>
+</div>
+<div *ngIf="!isLoggedIn">
+    <p>Please log in to continue.</p>
+</div>

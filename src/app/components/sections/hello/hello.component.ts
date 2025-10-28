@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { InputComponent } from '../input/input.component';
 import { OutputComponent } from '../output/output.component';
-import { NgcComponent } from '../ngc/ngc.component';
+import { NgcComponent } from '../templates/ngc/ngc.component';
 
 @Component({
   selector: 'app-hello',

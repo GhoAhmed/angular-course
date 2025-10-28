@@ -2,13 +2,18 @@ import { Routes } from '@angular/router';
 import { HelloComponent } from './components/sections/hello/hello.component';
 import { InputComponent } from './components/sections/input/input.component';
 import { OutputComponent } from './components/sections/output/output.component';
-import { InterpolationComponent } from './components/sections/interpolation/interpolation.component';
-import { ListenerComponent } from './components/sections/listener/listener.component';
-import { TwbComponent } from './components/sections/twb/twb.component';
-import { ControlFlowComponent } from './components/sections/control-flow/control-flow.component';
-import { PipesComponent } from './components/sections/pipes/pipes.component';
-import { NgtComponent } from './components/sections/ngt/ngt.component';
-import { NgctComponent } from './components/sections/ngct/ngct.component';
+import { InterpolationComponent } from './components/sections/templates/interpolation/interpolation.component';
+import { ListenerComponent } from './components/sections/templates/listener/listener.component';
+import { TwbComponent } from './components/sections/templates/twb/twb.component';
+import { ControlFlowComponent } from './components/sections/templates/control-flow/control-flow.component';
+import { PipesComponent } from './components/sections/templates/pipes/pipes.component';
+import { NgtComponent } from './components/sections/templates/ngt/ngt.component';
+import { NgctComponent } from './components/sections/templates/ngct/ngct.component';
+import { NgClassComponent } from './components/sections/directives/ng-class/ng-class.component';
+import { NgStyleComponent } from './components/sections/directives/ng-style/ng-style.component';
+import { NgIfComponent } from './components/sections/directives/ng-if/ng-if.component';
+import { NgForComponent } from './components/sections/directives/ng-for/ng-for.component';
+import { NgSwitchComponent } from './components/sections/directives/ng-switch/ng-switch.component';
 
 export const routes: Routes = [
   { path: 'hello', component: HelloComponent },
@@ -21,5 +26,10 @@ export const routes: Routes = [
   { path: 'pipes', component: PipesComponent },
   { path: 'ng-template', component: NgtComponent },
   { path: 'ng-container', component: NgctComponent },
+  { path: 'ng-class', component: NgClassComponent },
+  { path: 'ng-style', component: NgStyleComponent },
+  { path: 'ng-if', component: NgIfComponent },
+  { path: 'ng-for', component: NgForComponent },
+  { path: 'ng-switch', component: NgSwitchComponent },
   { path: '**', redirectTo: '' },
 ];

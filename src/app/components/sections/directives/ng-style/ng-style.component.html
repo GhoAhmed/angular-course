@@ -1,0 +1,11 @@
+<p [ngStyle]="{
+      color: textColor,
+      'font-weight': isBold ? 'bold' : 'normal',
+      'font-size.px': fontSize
+    }">
+    Dynamic Styled Text!
+</p>
+
+<button class="btn btn-secondary mx-1" (click)="toggleBold()">Toggle Bold</button>
+<button class="btn btn-danger mx-1" (click)="changeColor()">Change Color</button>
+<button class="btn btn-primary" (click)="increaseFont()">Increase Font</button>
