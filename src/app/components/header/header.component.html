@@ -1,6 +1,7 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-modern">
     <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/" routerLinkActive="active">DSI</a>
+        <a class="navbar-brand" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">DSI</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,7 +10,8 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active">Home</a>
+                    <a class="nav-link" routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">Home</a>
                 </li>
 
                 <!-- Components -->
@@ -24,6 +26,7 @@
                         <li><a class="dropdown-item" routerLink="/output" routerLinkActive="active">Output</a></li>
                     </ul>
                 </li>
+
                 <!-- Templates -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -35,17 +38,17 @@
                                 routerLinkActive="active">Interpolation</a></li>
                         <li><a class="dropdown-item" routerLink="/listener" routerLinkActive="active">Listener</a></li>
                         <li><a class="dropdown-item" routerLink="/two-way-binding" routerLinkActive="active">Two-way
-                                binding</a></li>
+                                Binding</a></li>
                         <li><a class="dropdown-item" routerLink="/control-flow" routerLinkActive="active">Control
                                 Flow</a></li>
                         <li><a class="dropdown-item" routerLink="/pipes" routerLinkActive="active">Pipes</a></li>
                         <li><a class="dropdown-item" routerLink="/ng-template" routerLinkActive="active">ng-template</a>
                         </li>
                         <li><a class="dropdown-item" routerLink="/ng-container"
-                                routerLinkActive="active">ng-container</a>
-                        </li>
+                                routerLinkActive="active">ng-container</a></li>
                     </ul>
                 </li>
+
                 <!-- Directives -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -58,6 +61,7 @@
                         <li><a class="dropdown-item" routerLink="/ng-if" routerLinkActive="active">ng-if</a></li>
                         <li><a class="dropdown-item" routerLink="/ng-for" routerLinkActive="active">ng-for</a></li>
                         <li><a class="dropdown-item" routerLink="/ng-switch" routerLinkActive="active">ng-switch</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
