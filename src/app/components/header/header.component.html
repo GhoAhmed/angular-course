@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/" routerLinkActive="active">Navbar</a>
+        <a class="navbar-brand" routerLink="/" routerLinkActive="active">DSI</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,28 +12,33 @@
                     <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active">Home</a>
                 </li>
 
-                <!-- Dropdown menu -->
+                <!-- Components -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Components
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="/properties" routerLinkActive="active">Input
-                                properties</a></li>
-                        <li><a class="dropdown-item" href="#">Sub Feature 2</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Another Link</a></li>
+                        <li><a class="dropdown-item" routerLink="/hello" routerLinkActive="active">Hello</a></li>
+                        <li><a class="dropdown-item" routerLink="/input" routerLinkActive="active">Input</a></li>
+                        <li><a class="dropdown-item" routerLink="/output" routerLinkActive="active">Output</a></li>
                     </ul>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <!-- Templates -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Templates
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/interpolation"
+                                routerLinkActive="active">Interpolation</a></li>
+                        <li><a class="dropdown-item" routerLink="/listener" routerLinkActive="active">Listener</a></li>
+                        <li><a class="dropdown-item" routerLink="/two-way-binding" routerLinkActive="active">Two-way
+                                binding</a></li>
+                        <li><a class="dropdown-item" routerLink="/control-flow" routerLinkActive="active">Control
+                                Flow</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>

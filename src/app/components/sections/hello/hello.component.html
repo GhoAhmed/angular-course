@@ -1,1 +1,23 @@
-<p>hello works!</p>
+<div>
+    <h5>this is from input : </h5>
+    <app-input [value]="50" [anotherValue]="'updated text.'" />
+</div>
+<hr />
+<div class="mb-2">
+    <h5>this is from output : </h5>
+    <p>Current count (in parent): {{ parentCount }}</p>
+
+    <app-output [count]="parentCount" (countChange)="updateCount($event)"></app-output>
+</div>
+<hr />
+<div class="mb-2">
+    <h5>this is from ng content (ngc) : </h5>
+    <app-ngc>
+        <p>This is the projected content from the parent!</p>
+        <button class="btn btn-primary">Click Me</button>
+    </app-ngc>
+</div>
+<hr />
+<div class="mb-2">
+
+</div>
