@@ -18,6 +18,7 @@ import { ContructorInjectionComponent } from './components/sections/di/contructo
 import { ContextInjectionComponent } from './components/sections/di/context-injection/context-injection.component';
 import { ReactiveFormsComponent } from './components/sections/forms/reactive-forms/reactive-forms.component';
 import { DynamicFormComponent } from './components/sections/forms/dynamic-form/dynamic-form.component';
+import { HttpCliComponent } from './components/sections/req/http-cli/http-cli.component';
 
 export const routes: Routes = [
   { path: 'hello', component: HelloComponent },
@@ -39,5 +40,6 @@ export const routes: Routes = [
   { path: 'context-injection', component: ContextInjectionComponent },
   { path: 'reactive-forms', component: ReactiveFormsComponent },
   { path: 'dynamic-form', component: DynamicFormComponent },
+  { path: 'http-client', component: HttpCliComponent },
   { path: '**', redirectTo: '' },
 ];
