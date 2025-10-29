@@ -16,6 +16,8 @@ import { NgForComponent } from './components/sections/directives/ng-for/ng-for.c
 import { NgSwitchComponent } from './components/sections/directives/ng-switch/ng-switch.component';
 import { ContructorInjectionComponent } from './components/sections/di/contructor-injection/contructor-injection.component';
 import { ContextInjectionComponent } from './components/sections/di/context-injection/context-injection.component';
+import { ReactiveFormsComponent } from './components/sections/forms/reactive-forms/reactive-forms.component';
+import { DynamicFormComponent } from './components/sections/forms/dynamic-form/dynamic-form.component';
 
 export const routes: Routes = [
   { path: 'hello', component: HelloComponent },
@@ -35,5 +37,7 @@ export const routes: Routes = [
   { path: 'ng-switch', component: NgSwitchComponent },
   { path: 'constructor-injection', component: ContructorInjectionComponent },
   { path: 'context-injection', component: ContextInjectionComponent },
+  { path: 'reactive-forms', component: ReactiveFormsComponent },
+  { path: 'dynamic-form', component: DynamicFormComponent },
   { path: '**', redirectTo: '' },
 ];

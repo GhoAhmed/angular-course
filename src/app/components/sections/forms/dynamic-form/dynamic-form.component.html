@@ -1,0 +1,96 @@
+<div class="form-wrapper">
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join us today and get started</p>
+        </div>
+
+        <form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
+            <ng-container *ngFor="let field of fields; let i = index">
+
+                <!-- Text / Email / Password -->
+                <div *ngIf="field.type !== 'select' && field.type !== 'checkbox'" class="form-group"
+                    [style.animation-delay.ms]="i * 50">
+                    <label [for]="field.name">{{ field.label }}</label>
+                    <div class="input-wrapper">
+                        <input [id]="field.name" [type]="field.type" [formControlName]="field.name"
+                            [placeholder]="field.placeholder"
+                            [class.invalid]="dynamicForm.get(field.name)?.touched && dynamicForm.get(field.name)?.invalid"
+                            [class.valid]="dynamicForm.get(field.name)?.touched && dynamicForm.get(field.name)?.valid" />
+                        <span class="input-icon valid-icon"
+                            *ngIf="dynamicForm.get(field.name)?.touched && dynamicForm.get(field.name)?.valid">
+                            ✓
+                        </span>
+                        <span class="input-icon error-icon"
+                            *ngIf="dynamicForm.get(field.name)?.touched && dynamicForm.get(field.name)?.invalid">
+                            !
+                        </span>
+                    </div>
+                    <div class="error-message"
+                        *ngIf="dynamicForm.get(field.name)?.touched && dynamicForm.get(field.name)?.invalid">
+                        <small *ngIf="dynamicForm.get(field.name)?.errors?.['required']">{{ field.label }} is
+                            required</small>
+                        <small *ngIf="dynamicForm.get(field.name)?.errors?.['email']">Please enter a valid email
+                            address</small>
+                        <small *ngIf="dynamicForm.get(field.name)?.errors?.['minlength']">
+                            Minimum {{ dynamicForm.get(field.name)?.errors?.['minlength']?.requiredLength }} characters
+                            required
+                        </small>
+                    </div>
+                </div>
+
+                <!-- Select -->
+                <div *ngIf="field.type === 'select'" class="form-group" [style.animation-delay.ms]="i * 50">
+                    <label [for]="field.name">{{ field.label }}</label>
+                    <div class="select-wrapper">
+                        <select [id]="field.name" [formControlName]="field.name"
+                            [class.invalid]="dynamicForm.get(field.name)?.touched && dynamicForm.get(field.name)?.invalid"
+                            [class.valid]="dynamicForm.get(field.name)?.touched && dynamicForm.get(field.name)?.valid">
+                            <option value="">Choose an option</option>
+                            <option *ngFor="let opt of field.options" [value]="opt">{{ opt }}</option>
+                        </select>
+                        <span class="select-arrow">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="error-message"
+                        *ngIf="dynamicForm.get(field.name)?.touched && dynamicForm.get(field.name)?.invalid">
+                        <small *ngIf="dynamicForm.get(field.name)?.errors?.['required']">Please select {{ field.label
+                            }}</small>
+                    </div>
+                </div>
+
+                <!-- Checkbox -->
+                <div *ngIf="field.type === 'checkbox'" class="form-group checkbox-group"
+                    [style.animation-delay.ms]="i * 50">
+                    <label class="checkbox-label">
+                        <input type="checkbox" [formControlName]="field.name" />
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">{{ field.label }}</span>
+                    </label>
+                    <div class="error-message"
+                        *ngIf="dynamicForm.get(field.name)?.touched && dynamicForm.get(field.name)?.invalid">
+                        <small *ngIf="dynamicForm.get(field.name)?.errors?.['required']">This field is required</small>
+                    </div>
+                </div>
+
+            </ng-container>
+
+            <button type="submit" [disabled]="dynamicForm.invalid" class="submit-btn">
+                <span class="btn-text">Submit Form</span>
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+
+            <div class="form-footer">
+                <p>Check the console!</p>
+            </div>
+        </form>
+    </div>
+</div>

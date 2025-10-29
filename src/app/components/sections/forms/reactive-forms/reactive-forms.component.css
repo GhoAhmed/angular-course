@@ -1,0 +1,246 @@
+.container {
+    max-width: 480px;
+    width: 100%;
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.header h2 {
+    font-size: 2rem;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    color: #2d3748;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+input.invalid {
+    border-color: #fc8181;
+    background: #fff5f5;
+}
+
+input.valid {
+    border-color: #48bb78;
+    background: #f0fff4;
+    padding-right: 3rem;
+}
+
+.icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #48bb78;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.error-message {
+    margin-top: 0.5rem;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.error-message small {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    display: block;
+}
+
+/* Custom Checkbox */
+.checkbox-group {
+    margin: 2rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: relative;
+    height: 22px;
+    width: 22px;
+    background-color: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    margin-right: 0.75rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.checkbox-label:hover .checkmark {
+    border-color: #667eea;
+}
+
+.checkbox-label input:checked~.checkmark {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-text {
+    color: #4a5568;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 2rem 1.5rem;
+    }
+
+    .header h2 {
+        font-size: 1.75rem;
+    }
+}
