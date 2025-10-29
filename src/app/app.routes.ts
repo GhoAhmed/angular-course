@@ -14,6 +14,8 @@ import { NgStyleComponent } from './components/sections/directives/ng-style/ng-s
 import { NgIfComponent } from './components/sections/directives/ng-if/ng-if.component';
 import { NgForComponent } from './components/sections/directives/ng-for/ng-for.component';
 import { NgSwitchComponent } from './components/sections/directives/ng-switch/ng-switch.component';
+import { ContructorInjectionComponent } from './components/sections/di/contructor-injection/contructor-injection.component';
+import { ContextInjectionComponent } from './components/sections/di/context-injection/context-injection.component';
 
 export const routes: Routes = [
   { path: 'hello', component: HelloComponent },
@@ -31,5 +33,7 @@ export const routes: Routes = [
   { path: 'ng-if', component: NgIfComponent },
   { path: 'ng-for', component: NgForComponent },
   { path: 'ng-switch', component: NgSwitchComponent },
+  { path: 'constructor-injection', component: ContructorInjectionComponent },
+  { path: 'context-injection', component: ContextInjectionComponent },
   { path: '**', redirectTo: '' },
 ];
