@@ -42,4 +42,5 @@ export const routes: Routes = [
   { path: 'dynamic-form', component: DynamicFormComponent },
   { path: 'http-client', component: HttpCliComponent },
   { path: '**', redirectTo: '' },
+  { path: '', redirectTo: 'hello', pathMatch: 'full' },
 ];
